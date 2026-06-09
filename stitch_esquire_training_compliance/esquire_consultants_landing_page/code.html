@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Esquire Consultants Limited</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f8f9ff",
+                        "primary": "#004370",
+                        "tertiary-fixed-dim": "#ffb781",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e1e2e8",
+                        "on-tertiary-fixed-variant": "#703800",
+                        "secondary-fixed-dim": "#5adf82",
+                        "tertiary": "#663300",
+                        "background": "#f8f9ff",
+                        "secondary-container": "#75f999",
+                        "secondary": "#006d33",
+                        "surface-container": "#eceef3",
+                        "outline": "#717781",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#abd2ff",
+                        "on-surface": "#191c20",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d8dadf",
+                        "surface-container-high": "#e7e8ed",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#2f1400",
+                        "primary-fixed-dim": "#9ccaff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#007236",
+                        "surface-variant": "#e1e2e8",
+                        "surface-container-low": "#f2f3f9",
+                        "tertiary-container": "#894600",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#eff0f6",
+                        "on-secondary-fixed-variant": "#005225",
+                        "inverse-primary": "#9ccaff",
+                        "on-tertiary-container": "#ffc295",
+                        "primary-fixed": "#d0e4ff",
+                        "outline-variant": "#c1c7d1",
+                        "inverse-surface": "#2e3135",
+                        "tertiary-fixed": "#ffdcc4",
+                        "primary-container": "#005b96",
+                        "surface": "#f8f9ff",
+                        "on-surface-variant": "#414750",
+                        "on-secondary-fixed": "#00210b",
+                        "secondary-fixed": "#78fc9c",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#12629d",
+                        "on-primary-fixed-variant": "#00497a",
+                        "on-primary-fixed": "#001d35",
+                        "on-background": "#191c20"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max-width": "1280px",
+                        "base": "8px",
+                        "section-padding-mobile": "40px",
+                        "gutter": "24px",
+                        "section-padding-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "caption": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .ambient-shadow {
+            box-shadow: 0 4px 20px rgba(0, 91, 150, 0.08);
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 91, 150, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md font-sans">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest sticky top-0 w-full z-50 border-b border-outline-variant shadow-sm">
+<div class="flex justify-between items-center h-20 px-8 max-w-container-max-width mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Esquire Consultants Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkidTCeivR6GuHOzaYYek8aY4lFJT7wYQxh06tiGB7S8j6uWGQ7mAU9dTvdH_QpYsDwqIc1wzVBDo1zuWsNRMs09vvpXmVoOdnInI8Y8dNngFKYSUsdxlt1bGDuhUe0F67IaCVPXD465Et72U0TGzzVOAvKGFReBEfiqbIJNTjvAlxIBXRe_EPaI_dUpfAv3iGEpu0CTivbY_b4Fb9AaOLYXT6Wui9LYrjjEMIJK8_mqA3upQJQerjtH1yyvSkUQvzWRPB4AKwIg"/>
+<span class="font-headline-md text-headline-md font-bold text-primary hidden md:block">Esquire Consultants</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Courses</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary px-6 py-3 rounded font-label-md text-label-md scale-100 active:scale-95 transition-transform duration-150 shadow-sm">
+                Request Consultation
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full overflow-hidden bg-gradient-to-br from-[#004370] to-[#005B96] text-on-primary">
+<div class="absolute inset-0 opacity-20">
+<img alt="Corporate training session" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2hI32wZgBLeoxtDGluFd9bFD98R9CnHaqP2a7qOo8aatoptbLeOgl3hkhdoZ8EirDJcHSTl8aM7bqlUUckEwINkTu4fv6tl8VRNmIAcdUC9OvtPQteZPnzXO3iuw3azr0DUoId1zXI9a5IK5Gq2m4-CRCnFlNWa9x1VDGyUM2dxlUO12egSmDdHrimWMDQHwZZH2kUYFW103a2S0ODCzz0ttBxQsZuw3lX28nyohDawZWWVGSlPZdzKEhthx783V6O3wVEZ74PQ"/>
+</div>
+<div class="absolute inset-0 bg-primary opacity-60"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-10"></div>
+<div class="relative max-w-container-max-width mx-auto px-8 py-24 md:py-32 flex flex-col items-center text-center fade-in-up">
+<span class="px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md mb-6 uppercase tracking-wider shadow-sm">NITA Accredited Training Provider</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6 max-w-4xl text-on-primary font-bold">
+                Empowering Organizations Through Professional Training &amp; Compliance Solutions
+            </h1>
+<p class="font-body-lg text-body-lg mb-10 max-w-3xl text-primary-fixed opacity-90">
+                NITA Accredited Training Provider (NITA/TRN/2632) delivering Occupational Safety &amp; Health, Fire Safety, First Aid, Environmental Management, and Corporate Training Services across Kenya.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-8 py-4 bg-primary-container text-on-primary rounded font-label-md text-label-md hover:bg-surface-tint transition-colors shadow-sm">
+                    Request a Consultation
+                </button>
+<button class="px-8 py-4 border-2 border-primary-fixed text-primary-fixed rounded font-label-md text-label-md hover:bg-primary-fixed/10 transition-colors shadow-sm">
+                    View Courses
+                </button>
+</div>
+</div>
+</header>
+<!-- About Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-bright">
+<div class="max-w-container-max-width mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">The Quest to Make a Distinction</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Esquire Consultants Limited stands at the forefront of corporate capacity building and regulatory compliance in Kenya. We are driven by a commitment to excellence, partnering with organizations to foster safer, more efficient, and compliant workplace environments.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Our authoritative approach blends deep industry expertise with practical, actionable training methodologies. We do not just consult; we architect distinction within your organizational framework.
+                    </p>
+<div class="flex items-center gap-4 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-3xl">verified</span>
+<span>NITA/TRN/2632 Accredited</span>
+</div>
+</div>
+<div class="relative fade-in-up" style="transition-delay: 0.2s;">
+<div class="absolute -inset-4 bg-primary-fixed rounded-xl opacity-20 transform rotate-2"></div>
+<img alt="Consultants in a meeting" class="relative z-10 rounded-xl shadow-lg w-full h-auto object-cover border border-outline-variant/20 hover-lift" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv_jdKsqgpwqvlDthcgUj4pgAohJchTpTf9LiB350ka9OhnW79rtooz6LGy1xSD_tODm7ohnFhvGTleztL_Cy-TBG-kXnt2DgdnhSlwjJZ161_ls3j2JromEY-EE-ZoJfgsiOXnkJBtfgSlexAycmzk-tW2CTDK5_HaA7qbvFlPdunSMtNge3hAXV932l3BHSsPqfHsbXFWLJjwmhLv7BNbQWuUPlMffbkQmJkk570RCCD4phIyMrjOg4OSmlMSfy91Sp_zSq0_A"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-background">
+<div class="max-w-container-max-width mx-auto px-8">
+<div class="text-center mb-16 fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Training Programs &amp; Consultancy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Comprehensive solutions tailored for corporate excellence and strict regulatory adherence.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Service Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl ambient-shadow hover-lift border border-outline-variant/10 fade-in-up flex flex-col h-full">
+<div class="w-16 h-16 bg-primary-fixed/20 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">health_and_safety</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Occupational Safety</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Comprehensive OSH training ensuring workplace hazard mitigation and regulatory compliance.</p>
+<a class="mt-6 text-primary font-label-md text-label-md flex items-center gap-1 hover:text-surface-tint" href="#">
+                        Learn more <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl ambient-shadow hover-lift border border-outline-variant/10 fade-in-up flex flex-col h-full" style="transition-delay: 0.1s;">
+<div class="w-16 h-16 bg-error-container/40 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-error text-3xl">local_fire_department</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Fire Safety</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Expert-led fire prevention, risk assessment, and emergency response training programs.</p>
+<a class="mt-6 text-primary font-label-md text-label-md flex items-center gap-1 hover:text-surface-tint" href="#">
+                        Learn more <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl ambient-shadow hover-lift border border-outline-variant/10 fade-in-up flex flex-col h-full" style="transition-delay: 0.2s;">
+<div class="w-16 h-16 bg-secondary-container/40 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">medical_services</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">First Aid</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Certified first aid administration courses equipping your team for critical emergencies.</p>
+<a class="mt-6 text-primary font-label-md text-label-md flex items-center gap-1 hover:text-surface-tint" href="#">
+                        Learn more <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl ambient-shadow hover-lift border border-outline-variant/10 fade-in-up flex flex-col h-full" style="transition-delay: 0.3s;">
+<div class="w-16 h-16 bg-secondary-container/20 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">eco</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Environmental Mgt.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Strategic consulting on environmental impact assessments and sustainable corporate practices.</p>
+<a class="mt-6 text-primary font-label-md text-label-md flex items-center gap-1 hover:text-surface-tint" href="#">
+                        Learn more <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="mt-12 text-center fade-in-up">
+<img alt="Service Icons reference" class="mx-auto h-24 object-contain opacity-50 grayscale hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoAicSmabIpVUOmLSbPbF4wGfd_rdHrgEzcJhTB5-G2KGJcbTP4u8aKZpNW27f_q-k7d6GX72smBtG2IqGqy8K9DLXM6SWOelRi6QkmnYnV0Qsin-jLy5cUg5WbI65RzSyp29EhBx1MOlhRlSQYvl1iwqqsCBClsdMBIDZouMzpV0dtNKEY8ZZwzg3DJYq-d8pi7VYxgab_akr0YAkslEyfervPFDktb6RvhcBeIw28Q9QSU4B7MhMO3-okWyoFpTf5WrMXfHR-Q"/>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-16 bg-primary text-on-primary">
+<div class="max-w-container-max-width mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-primary-fixed/30">
+<div class="p-6 fade-in-up">
+<div class="font-display-lg text-display-lg font-bold text-secondary-fixed-dim mb-2">15+</div>
+<div class="font-label-md text-label-md uppercase tracking-wider opacity-90">Years of Experience</div>
+</div>
+<div class="p-6 fade-in-up" style="transition-delay: 0.1s;">
+<div class="font-display-lg text-display-lg font-bold text-secondary-fixed-dim mb-2">10k+</div>
+<div class="font-label-md text-label-md uppercase tracking-wider opacity-90">Trainees Served</div>
+</div>
+<div class="p-6 fade-in-up" style="transition-delay: 0.2s;">
+<div class="font-display-lg text-display-lg font-bold text-secondary-fixed-dim mb-2">500+</div>
+<div class="font-label-md text-label-md uppercase tracking-wider opacity-90">Organizations Partnered</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Map -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-bright">
+<div class="max-w-container-max-width mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Form -->
+<div class="bg-surface-container-lowest p-8 md:p-12 rounded-xl ambient-shadow border border-outline-variant/10 fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Request a Consultation</h2>
+<form class="space-y-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Full Name</label>
+<input class="w-full bg-surface text-on-surface border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary rounded p-3 transition-colors" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Corporate Email</label>
+<input class="w-full bg-surface text-on-surface border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary rounded p-3 transition-colors" placeholder="john@company.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Service of Interest</label>
+<select class="w-full bg-surface text-on-surface border-outline-variant/50 focus:border-primary focus:ring-1 focus:ring-primary rounded p-3 transition-colors">
+<option>Occupational Safety</option>
+<option>Fire Safety Training</option>
+<option>First Aid Certification</option>
+<option>Corporate Compliance</option>
+</select>
+</div>
+<button class="w-full bg-primary-container text-on-primary py-4 rounded font-label-md text-label-md hover:bg-surface-tint transition-colors shadow-sm" type="button">
+                            Submit Request
+                        </button>
+</form>
+</div>
+<!-- Info & Map -->
+<div class="fade-in-up" style="transition-delay: 0.2s;">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Contact Information</h2>
+<div class="space-y-6 mb-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-2xl mt-1">location_on</span>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface text-lg">Nairobi, Kenya</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Corporate Headquarters</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-2xl mt-1">mail</span>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface text-lg">Email Us</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">info@esquireconsultants.co.ke</p>
+</div>
+</div>
+</div>
+<button class="mb-8 flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded font-label-md text-label-md hover:bg-[#128C7E] transition-colors shadow-sm">
+<span class="material-symbols-outlined">chat</span> Chat on WhatsApp
+                    </button>
+<div class="h-64 rounded-xl overflow-hidden shadow-sm bg-surface-container border border-outline-variant/20 relative" data-location="Nairobi, Kenya" style="">
+<!-- Placeholder for map -->
+<div class="absolute inset-0 flex items-center justify-center text-on-surface-variant font-label-md">
+                             Map Integration Area
+                         </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest w-full bottom-0 py-section-padding-desktop">
+<div class="max-w-container-max-width mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<span class="font-headline-sm text-headline-sm font-bold text-primary mb-4 block">Esquire Consultants</span>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4">Empowering organizations through professional training and compliance solutions in Kenya.</p>
+<div class="text-sm font-body-md text-on-surface-variant">
+                    NITA/TRN/2632
+                </div>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md text-on-surface mb-4 uppercase tracking-wider">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Services</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Training Programs</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Compliance</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-label-md text-on-surface mb-4 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="col-span-1 flex items-end">
+<div class="font-body-md text-body-md text-on-surface-variant text-sm opacity-80">
+                    © 2024 Esquire Consultants Limited. All rights reserved.
+                 </div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for fade-in animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body></html>
